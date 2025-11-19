@@ -1,6 +1,6 @@
 NAME		=	philo
 CC			=	cc
-CFLAGS		=	-Wall -Wextra -Werror -Iinclude
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 RM			=	rm -f
 
 SRCS		=	src/main.c \

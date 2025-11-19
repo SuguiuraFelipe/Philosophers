@@ -55,5 +55,8 @@ void				*philo_routine(void *arg);
 void				*monitor_death(void *arg);
 int					monitor_philo_died(t_data *data, int i, long long now);
 void				clean_all(t_data *data);
+void				smart_sleep(long long time, t_data *data);
+int					is_alive(t_data *data);
+void				print_msg(t_philo *p, t_data *d, char *msg);
 
 #endif
