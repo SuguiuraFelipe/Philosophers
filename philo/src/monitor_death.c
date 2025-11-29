@@ -6,7 +6,7 @@
 /*   By: fsuguiur <fsuguiur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:50:44 by fsuguiur          #+#    #+#             */
-/*   Updated: 2025/11/17 16:03:36 by fsuguiur         ###   ########.fr       */
+/*   Updated: 2025/11/29 11:54:34 by fsuguiur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	monitor_eat_enough(t_data *data)
 
 int	monitor_philo_died(t_data *data, int i, long long now)
 {
-	if ((now - data->philos[i].last_meal) > data->time_to_die)
+	if ((now - data->philos[i].last_meal) >= data->time_to_die)
 	{
 		pthread_mutex_lock(&data->alive_mutex);
 		data->all_alive = 0;
